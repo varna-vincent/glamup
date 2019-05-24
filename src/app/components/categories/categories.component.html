@@ -1,0 +1,95 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="outer-container">
+  
+  <header>
+	<mat-toolbar>
+	  <span class="p-2 align-items-start">
+	  <div class="container" (click)="toggle($event); drawer.toggle();">
+		  <div class="bar1"></div>
+		  <div class="bar2"></div>
+		  <div class="bar3"></div>
+		</div>
+	  </span>
+	  <span class="p-2 flex-grow-1"><a href=""><h3>GLAM UP</h3></a></span>
+	</mat-toolbar>
+  </header>
+
+  <mat-drawer-container class="sidenav-container" autosize>
+	  <mat-drawer #drawer class="sidenav" mode="side">
+	    <p><a href="/categories">CATEGORIES</a></p>
+	    <p>NEWS</p>
+	    <p>OUR APP</p>
+	    <p>LOGIN</p>
+	  </mat-drawer>
+	  <div class="sidenav-content">
+	  	<div class="container">
+		  <div class="row">
+		    <div class="col">
+		      <img src="../../../assets/lipsticks.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Lipsticks</div>
+			  </div>
+		    </div>
+		    <div class="col">
+		      <img src="../../../assets/spa.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Spa Gifts</div>
+			  </div>
+		    </div>
+		    <div class="col">
+		      <img src="../../../assets/eyeshadow.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Eyeshadow Palettes</div>
+			  </div>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="col">
+		      <img src="../../../assets/nailpolish.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Nail Polishes</div>
+			  </div>
+		    </div>
+		    <div class="col">
+		      <img src="../../../assets/contour.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Contour Palettes</div>
+			  </div>
+		    </div>
+		    <div class="col">
+		      <img src="../../../assets/moisturizer.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Moisturizers</div>
+			  </div>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="col">
+		      <img src="../../../assets/facecream.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Face Creams</div>
+			  </div>
+		    </div>
+		    <div class="col">
+		      <img src="../../../assets/blush.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Blush</div>
+			  </div>
+		    </div>
+		    <div class="col">
+		      <img src="../../../assets/brushes.jpg" alt="Avatar" class="image">
+			  <div class="middle">
+			    <div class="text">Makeup Brush Sets</div>
+			  </div>
+		    </div>
+		  </div>
+		</div>
+	  </div>
+	</mat-drawer-container>
+  
+  <footer class="footer">
+    <div class="d-flex justify-content-center">
+      <span class="btn btn-outline-customlight text-light">Copyright © 2019 - Designed and developed by <a class="text-light" href="https://github.com/varna-vincent" target="_blank">Varna Vincent</a></span>
+    </div>
+  </footer>
+</div>

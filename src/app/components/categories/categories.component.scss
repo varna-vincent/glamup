@@ -1,0 +1,100 @@
+/* header */
+mat-toolbar {
+	background: none;	
+}
+
+%text-gruppo {
+  color: #444;
+  font-family: Gruppo;
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 400;
+}
+
+span, a, h5 {
+	text-decoration: none;
+	@extend %text-gruppo;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.outer-container {
+	text-align:center;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.content {
+	min-height: 85vh;
+}
+
+/* sidebar */
+.sidenav p {
+	@extend %text-gruppo;
+	padding: 2px 5px;
+	font-size: 1.1rem;
+}
+
+.sidenav-content {
+  min-height: 85vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* categories */
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 250px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.col:hover .image {
+  opacity: 0.3;
+}
+
+.col:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: #444;
+  font-size: 16px;
+  padding: 16px 32px;
+}
