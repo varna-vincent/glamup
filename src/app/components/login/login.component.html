@@ -1,0 +1,16 @@
+<div class="container d-flex justify-content-center">
+	<form>
+	  <div class="form-group">
+	    <label for="exampleInputEmail">Email address</label>
+	    <input type="email" class="form-control" name="email" [(ngModel)]="email" aria-describedby="emailHelp" placeholder="Enter email" required="">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Password</label>
+	    <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password" required="">
+	  </div>
+	  <button type="button" class="btn btn-primary" (click)="isLogin ? login() : register();">{{ isLogin ? "Login" : "Register" }}</button>
+	  <small id="registerHelp" *ngIf="isLogin" class="p-2 form-text text-muted">Don't have an account? <a (click)="isLogin = false">Register</a>.</small>
+	  <small id="loginHelp" *ngIf="!isLogin" class="p-2 form-text text-muted">Already have an account? <a (click)="isLogin = true">Login</a>.</small>
+	  <small id="loginHelp" *ngIf="isError" class="pt-2 form-text text-muted">{{ errorMsg }}</small>
+	</form>	
+</div>

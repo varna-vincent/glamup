@@ -1,4 +1,5 @@
-<header>
+<div class="outer-container">
+  <header>
 	<mat-toolbar>
 	  <span class="p-2 align-items-start">
 	  <div class="container" (click)="toggle($event); drawer.toggle();">
@@ -9,5 +10,26 @@
 	  </span>
 	  <span class="p-2 flex-grow-1"><a href=""><h3>GLAM UP</h3></a></span>
 	</mat-toolbar>
-	
-</header>
+  </header>
+
+  <mat-drawer-container class="sidenav-container" autosize>
+	  <mat-drawer #drawer class="sidenav pl-3" mode="side">
+	  	<p><a href="">HOME</a></p>
+	    <p><a href="/categories">CATEGORIES</a></p>
+	    <p>NEWS</p>
+	    <p>OUR APP</p>
+	    <p *ngIf="!isLoggedIn"><a>MY PROFILE</a></p>
+	    <p *ngIf="!isLoggedIn"><a>MY PRODUCTS</a></p>
+	    <p *ngIf="!isLoggedIn"><a>ADD PRODUCTS</a></p>
+	    <p *ngIf="!isLoggedIn"><a (click)="logout();">LOGOUT</a></p>
+	    <p *ngIf="isLoggedIn"><a href="/login">LOGIN</a></p>
+	  </mat-drawer>
+
+	  <div class="sidenav-content d-flex align-items-center">
+  		<router-outlet></router-outlet>
+	  </div>
+
+	</mat-drawer-container>
+
+	<app-footer></app-footer>
+</div>

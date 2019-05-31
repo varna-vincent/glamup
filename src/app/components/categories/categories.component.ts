@@ -7,15 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  events: string[] = [];
-  opened: boolean;
-
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  toggle(event) {
-	 event.srcElement.classList.toggle("change");
-  }
+  ngOnInit() {}
 }

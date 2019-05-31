@@ -1,5 +1,6 @@
+/** header **/
 mat-toolbar {
-	background: none;	
+  background: none; 
 }
 
 %text-gruppo {
@@ -11,8 +12,8 @@ mat-toolbar {
 }
 
 span, a, h5 {
-	text-decoration: none;
-	@extend %text-gruppo;
+  text-decoration: none;
+  @extend %text-gruppo;
 }
 
 .container {
@@ -38,4 +39,27 @@ span, a, h5 {
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-6px, -6px);
   transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.outer-container {
+  text-align:center;
+  width: 98vw;
+  min-height: 100vh;
+}
+
+.content {
+  min-height: 85vh;
+}
+
+/** sidebar **/
+.sidenav p {
+  @extend %text-gruppo;
+  padding: 2px 5px;
+  font-size: 1.1rem;
+}
+
+.sidenav-content {
+  min-height: 85vh;
+  align-items: center;
+  justify-content: center;
 }
