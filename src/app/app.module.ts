@@ -9,6 +9,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+import { AddProductComponent } from './components/products/add-product/add-product.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material';
@@ -25,7 +26,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     CategoriesComponent,
     HeaderComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

@@ -18,11 +18,11 @@
 	    <p><a href="/categories">CATEGORIES</a></p>
 	    <p>NEWS</p>
 	    <p>OUR APP</p>
-	    <p *ngIf="!isLoggedIn"><a>MY PROFILE</a></p>
-	    <p *ngIf="!isLoggedIn"><a>MY PRODUCTS</a></p>
-	    <p *ngIf="!isLoggedIn"><a>ADD PRODUCTS</a></p>
-	    <p *ngIf="!isLoggedIn"><a (click)="logout();">LOGOUT</a></p>
-	    <p *ngIf="isLoggedIn"><a href="/login">LOGIN</a></p>
+	    <p *ngIf="isLoggedIn"><a>MY PROFILE</a></p>
+	    <p *ngIf="isLoggedIn"><a>MY PRODUCTS</a></p>
+	    <p *ngIf="isLoggedIn"><a routerLink="/addProduct">ADD PRODUCTS</a></p>
+	    <p *ngIf="isLoggedIn"><a (click)="logout();">LOGOUT</a></p>
+	    <p *ngIf="!isLoggedIn"><a routerLink="/login">LOGIN</a></p>
 	  </mat-drawer>
 
 	  <div class="sidenav-content d-flex align-items-center">

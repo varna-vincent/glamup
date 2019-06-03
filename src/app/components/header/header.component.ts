@@ -12,17 +12,19 @@ export class HeaderComponent implements OnInit {
   events: string[] = [];
   opened: boolean;
 
-  public isLoggedIn: boolean = false;
+  public isLoggedIn: boolean;
   
   constructor(public firebaseAuth: AngularFireAuth, private router: Router) { }
 
   ngOnInit() {
+    var self = this;
     this.firebaseAuth.auth.onAuthStateChanged(function(user) {
       if (user) {
-        this.isLoggedIn = true;
-        console.log("Am I logged in? => " + this.isLoggedIn);
-        console.log(user);
+        self.isLoggedIn = true;
+      } else {
+        self.isLoggedIn = false;
       }
+      console.log(user);
     });
   }
 
@@ -33,6 +35,6 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.firebaseAuth.auth.signOut();
     this.isLoggedIn = false;
-    window.location.href="/login";
+    this.router.navigate(['login']);
   }
 }
