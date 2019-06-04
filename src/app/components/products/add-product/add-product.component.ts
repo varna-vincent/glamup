@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from './../product.service';
+import { Product } from './../product.model';
 
 @Component({
   selector: 'app-add-product',
@@ -6,10 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
+  
+  public product: any = {
+  	shadeName: '',
+  	shadeSubtitle: '',
+  	productName: '',
+    productSubtitle: '', 
+    description: '',
+    modelNumber: '',
+    productType: '',
+    productOwner: '', 
+    productImage: '', 
+    price: 0
+  }; 
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+  }
+
+  addProduct(product: Product) {
+  	this.productService.createProduct(product);
   }
 
 }

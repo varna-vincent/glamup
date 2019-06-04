@@ -14,10 +14,9 @@
 
   <mat-drawer-container class="sidenav-container" autosize>
 	  <mat-drawer #drawer class="sidenav pl-3" mode="side">
-	  	<p><a href="">HOME</a></p>
-	    <p><a href="/categories">CATEGORIES</a></p>
-	    <p>NEWS</p>
-	    <p>OUR APP</p>
+	  	<p><a routerLink="">HOME</a></p>
+	    <p><a routerLink="/categories">CATEGORIES</a></p>
+	    <p><a routerLink="/ourApp">OUR APP</a></p>
 	    <p *ngIf="isLoggedIn"><a>MY PROFILE</a></p>
 	    <p *ngIf="isLoggedIn"><a>MY PRODUCTS</a></p>
 	    <p *ngIf="isLoggedIn"><a routerLink="/addProduct">ADD PRODUCTS</a></p>

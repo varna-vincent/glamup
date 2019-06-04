@@ -4,12 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { CategoriesComponent } from './components/categories/categories.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { LoginComponent } from './components/login/login.component';
-import { AddProductComponent } from './components/products/add-product/add-product.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material';
@@ -18,16 +12,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    CategoriesComponent,
-    HeaderComponent,
-    LoginComponent,
-    FooterComponent,
-    AddProductComponent
+    RoutingComponents
   ],
   imports: [
     BrowserModule,
@@ -37,7 +28,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MatSidenavModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
