@@ -1,6 +1,7 @@
 import { Deserializable } from "./../../shared/models/deserializable.model";
 
 export class Product {
+  id: string;
   shadeName: string;
   shadeSubtitle: string;
   productName: string;

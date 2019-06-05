@@ -1,41 +1,41 @@
 <div class="container">
 	<div class="d-flex justify-content-start"><h5>ADD PRODUCT</h5></div>
-	<form>
+	<form #addProductForm="ngForm" (ngSubmit)="addProduct(addProductForm)">
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="shadeName">Shade Name</label>
-	    <input type="text" class="form-control w-75" name="shadeName" [(ngModel)]="product.shadeName" placeholder="Enter shade name" required="">
+	    <input type="text" class="form-control w-75" name="shadeName" ngModel placeholder="Enter shade name" required="">
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="shadeSubtitle">Shade Subtitle</label>
-	    <input type="text" class="form-control w-75" name="shadeSubtitle" [(ngModel)]="product.shadeSubtitle" placeholder="Enter shade subtitle" required="">
+	    <input type="text" class="form-control w-75" name="shadeSubtitle" ngModel placeholder="Enter shade subtitle" required="">
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="productName">Product Name</label>
-	    <input type="text" class="form-control w-75" name="productName" [(ngModel)]="product.productName" placeholder="Enter product name" required="">
+	    <input type="text" class="form-control w-75" name="productName" ngModel placeholder="Enter product name" required="">
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="productSubtitle">Product Subtitle</label>
-	    <textarea class="form-control w-75" id="productSubtitle" name="productSubtitle" [(ngModel)]="product.productSubtitle" rows="2" placeholder="Enter product subtitle"></textarea>
+	    <textarea class="form-control w-75" id="productSubtitle" name="productSubtitle" ngModel rows="2" placeholder="Enter product subtitle"></textarea>
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="description">Description</label>
-	    <textarea class="form-control w-75" id="description" name="description" [(ngModel)]="product.description" rows="4" placeholder="Enter description"></textarea>
+	    <textarea class="form-control w-75" id="description" name="description" ngModel rows="4" placeholder="Enter description"></textarea>
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="modelNumber">Model Number</label>
-	    <input type="text" class="form-control w-75" name="modelNumber" [(ngModel)]="product.modelNumber" placeholder="Enter model number">
+	    <input type="text" class="form-control w-75" name="modelNumber" ngModel placeholder="Enter model number">
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="productOwner">Product Owner</label>
-	    <input type="text" class="form-control w-75" name="productOwner" [(ngModel)]="product.productOwner" placeholder="Enter product owner" required="">
+	    <input type="text" class="form-control w-75" name="productOwner" ngModel placeholder="Enter product owner" required="">
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="price">Price</label>
-	    <input type="number" class="form-control w-75" name="price" [(ngModel)]="product.price" placeholder="Enter price" required="">
+	    <input type="number" class="form-control w-75" name="price" ngModel placeholder="Enter price" required="">
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="productType">Product Type</label>
-	    <select class="form-control w-75" id="productType" name="productType" [(ngModel)]="product.productType" required="">
+	    <select class="form-control w-75" id="productType" name="productType" ngModel required="">
 	      <option value="Blush">Blush</option>
 	      <option value="Brush">Brush</option>
 	      <option value="Contour Palette">Contour Palette</option>
@@ -49,8 +49,8 @@
 	  </div>
 	  <div class="form-group d-flex align-items-start">
 	    <label class="w-25" for="productImage">Product Image</label>
-	    <input type="file" class="form-control-file w-75" id="productImage" name="productImage" [(ngModel)]="product.productImage">
+	    <input type="file" class="form-control-file w-75" id="productImage" (change)="uploadImage($event)" accept=".png,.jpg">
 	  </div>
-	  <button type="button" class="btn btn-primary" (click)="addProduct();">Submit</button>
+	  <button type="submit" class="btn btn-primary" [disabled]="isDisabled">Submit</button>
 	</form>	
 </div>

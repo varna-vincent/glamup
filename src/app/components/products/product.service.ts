@@ -1,15 +1,34 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Product } from './product.model';
+
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private firestore: AngularFirestoreModule) { }
+  private productsCollection: AngularFirestoreCollection<Product>;
+  products: Observable<Product[]>;
 
-  createProduct(product: Product){
-    return this.firestore.collection('products').add(product);
+  constructor(private firestore: AngularFirestore) { 
+  	this.productsCollection = firestore.collection<Product>('products');
+    this.products = this.productsCollection.valueChanges();
+  }
+
+  createProduct(product: Product) {
+    return this.productsCollection.add(product);
+  }
+
+  getAllProducts() {
+  	return this.firestore.collection('products').snapshotChanges();
+  }
+
+  getProductsByUserId(userId: string) {
+  	this.productsCollection = this.firestore.collection<Product>('products', ref => {
+     return ref.where('createdBy', '==', userId)
+    });
+  	return this.productsCollection.snapshotChanges();
   }
 }

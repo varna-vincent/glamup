@@ -18,7 +18,7 @@
 	    <p><a routerLink="/categories">CATEGORIES</a></p>
 	    <p><a routerLink="/ourApp">OUR APP</a></p>
 	    <p *ngIf="isLoggedIn"><a>MY PROFILE</a></p>
-	    <p *ngIf="isLoggedIn"><a>MY PRODUCTS</a></p>
+	    <p *ngIf="isLoggedIn"><a routerLink="/myProducts">MY PRODUCTS</a></p>
 	    <p *ngIf="isLoggedIn"><a routerLink="/addProduct">ADD PRODUCTS</a></p>
 	    <p *ngIf="isLoggedIn"><a (click)="logout();">LOGOUT</a></p>
 	    <p *ngIf="!isLoggedIn"><a routerLink="/login">LOGIN</a></p>
