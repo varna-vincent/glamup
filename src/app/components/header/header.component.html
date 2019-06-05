@@ -14,14 +14,14 @@
 
   <mat-drawer-container class="sidenav-container" autosize>
 	  <mat-drawer #drawer class="sidenav pl-3" mode="side">
-	  	<p><a routerLink="">HOME</a></p>
-	    <p><a routerLink="/categories">CATEGORIES</a></p>
-	    <p><a routerLink="/ourApp">OUR APP</a></p>
-	    <p *ngIf="isLoggedIn"><a>MY PROFILE</a></p>
-	    <p *ngIf="isLoggedIn"><a routerLink="/myProducts">MY PRODUCTS</a></p>
-	    <p *ngIf="isLoggedIn"><a routerLink="/addProduct">ADD PRODUCTS</a></p>
-	    <p *ngIf="isLoggedIn"><a (click)="logout();">LOGOUT</a></p>
-	    <p *ngIf="!isLoggedIn"><a routerLink="/login">LOGIN</a></p>
+	  	<p><a (click)="drawer.toggle();" routerLink="">HOME</a></p>
+	    <p><a (click)="drawer.toggle();" routerLink="/categories">CATEGORIES</a></p>
+	    <p><a (click)="drawer.toggle();" routerLink="/ourApp">OUR APP</a></p>
+	    <p *ngIf="isLoggedIn"><a (click)="drawer.toggle();" >MY PROFILE</a></p>
+	    <p *ngIf="isLoggedIn"><a (click)=" drawer.toggle();" routerLink="/myProducts">MY PRODUCTS</a></p>
+	    <p *ngIf="isLoggedIn"><a (click)="drawer.toggle();" routerLink="/addProduct">ADD PRODUCTS</a></p>
+	    <p *ngIf="isLoggedIn"><a (click)="drawer.toggle();logout();">LOGOUT</a></p>
+	    <p *ngIf="!isLoggedIn"><a (click)="drawer.toggle();" routerLink="/login">LOGIN</a></p>
 	  </mat-drawer>
 
 	  <div class="sidenav-content d-flex align-items-center">

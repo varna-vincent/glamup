@@ -17,12 +17,11 @@ export class HeaderComponent implements OnInit {
   constructor(public firebaseAuth: AngularFireAuth, private router: Router) { }
 
   ngOnInit() {
-    var self = this;
-    this.firebaseAuth.auth.onAuthStateChanged(function(user) {
+    this.firebaseAuth.auth.onAuthStateChanged(user => {
       if (user) {
-        self.isLoggedIn = true;
+        this.isLoggedIn = true;
       } else {
-        self.isLoggedIn = false;
+        this.isLoggedIn = false;
       }
     });
   }

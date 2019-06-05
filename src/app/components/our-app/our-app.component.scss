@@ -11,7 +11,7 @@
 	width: 60vw;
 }
 
-h1 { font-family: Gruppo; font-size: 50px; font-style: normal; font-variant: normal; line-height: 40.4px; color: #837f7f;} h3 { font-family: "Pinyon Script"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Pinyon Script"; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Pinyon Script"; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Pinyon Script"; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+h1 { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 50px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 40.4px; color: #837f7f;} h3 { font-family: "Pinyon Script"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Pinyon Script"; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Pinyon Script"; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Pinyon Script"; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
 .scroll {
 	font-family: Gruppo; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 35px; text-decoration: none; color: #444;
@@ -19,8 +19,9 @@ h1 { font-family: Gruppo; font-size: 50px; font-style: normal; font-variant: nor
 
 .text {
   color: #444;
-  font-family: Gruppo;
-  font-style: normal; 
-  font-variant: normal; 
-  font-weight: 400;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: inherit;
 }

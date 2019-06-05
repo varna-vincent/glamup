@@ -6,8 +6,8 @@
 	    <div class="card-body">
 	      <h5 class="card-title">{{ product.productName}}</h5>
 	      <p class="card-text" *ngIf="product.productSubtitle != ''">{{ product.productSubtitle }}</p>
-	      <p class="card-text" *ngIf="product.shadeName != ''">{{ product.shadeName }}</p>
-	      <p class="card-text" *ngIf="product.shadeSubtitle != ''">{{ product.shadeSubtitle }}</p>
+	      <p class="card-text mb-0" *ngIf="product.shadeName != ''">{{ product.shadeName }}</p>
+	      <p class="card-text" *ngIf="product.shadeSubtitle != ''"><small>{{ product.shadeSubtitle }}</small></p>
 	    </div>
 	  </div>
 	</div>
