@@ -17,7 +17,7 @@
 	  	<p><a (click)="drawer.toggle();" routerLink="">HOME</a></p>
 	    <p><a (click)="drawer.toggle();" routerLink="/categories">CATEGORIES</a></p>
 	    <p><a (click)="drawer.toggle();" routerLink="/ourApp">OUR APP</a></p>
-	    <p *ngIf="isLoggedIn"><a (click)="drawer.toggle();" >MY PROFILE</a></p>
+	    <p><a (click)="drawer.toggle();" routerLink="/allProducts">ALL PRODUCTS</a></p>
 	    <p *ngIf="isLoggedIn"><a (click)=" drawer.toggle();" routerLink="/myProducts">MY PRODUCTS</a></p>
 	    <p *ngIf="isLoggedIn"><a (click)="drawer.toggle();" routerLink="/addProduct">ADD PRODUCTS</a></p>
 	    <p *ngIf="isLoggedIn"><a (click)="drawer.toggle();logout();">LOGOUT</a></p>

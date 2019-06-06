@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="d-flex justify-content-start"><h5>ALL PRODUCTS</h5></div>
+    <div class="card-columns">
+	  <div class="card" *ngFor="let product of products">
+	    <img [src]="product.productImage" class="card-img-top">
+	    <div class="card-body">
+	      <h5 class="card-title">{{ product.productName}}</h5>
+	      <p class="card-text" *ngIf="product.productSubtitle != ''">{{ product.productSubtitle }}</p>
+	      <p class="card-text mb-0" *ngIf="product.shadeName != ''">{{ product.shadeName }}</p>
+	      <p class="card-text" *ngIf="product.shadeSubtitle != ''"><small>{{ product.shadeSubtitle }}</small></p>
+	    </div>
+	  </div>
+	</div>
+</div>
